@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+<title>HTML Tutorial</title>
+<link rel="icon" type="image/png" href="https://www.w3schools.com/favicon-32x32.png">
+
+<style>
+.internalCss{background-color: powderblue;}
+
+
+.linkStyle:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+.linkStyle:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+.linkStyle:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.linkStyle:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.bgImage {
+  background-image: url('https://www.w3schools.com/w3images/cellphone.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+.classExample{color:red;}
+#idExample{color:yellow;}
+</style>
+
+<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+<h1>1.HTML Basic & Elements</h1>
+<h1>Just a normal header</h1>
+<p>Just a normal paragraph.</p>
+<a href="https://www.w3schools.com">W3Schools website link</a>
+<h5>Image</h5>
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+<p>A paragraph with break<br/> tag example.</p>
+<hr>
+
+<h1 id="htmlHeadings">2.HTML Attributes</h1>
+<h5>Image with relative url</h5>
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+<h5>Image with absolute url</h5>
+<img src="https://www.w3schools.com/html/img_girl.jpg" alt="W3Schools.com" width="104" height="142">
+<p style="color:red;">This is a red paragraph.</p>
+<p title='I am a "tooltip"'>This is a paragraph with tooltip.</p>
+<hr>
+
+<h1>3.HTML Headings</h1>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<hr>
+
+<h1>4.HTML Paragraphs</h1>
+<p>
+This paragraph
+contains         a lot of spaces
+in the source         code,
+but the        browser
+ignores it.
+</p>
+<p>Using pre-formatted tag, we can write poems or anything as it is</p>
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+<hr>
+
+<h1>5.HTML Styles</h1>
+<h1 style="background-color:tomato; color:blue;">This is a heading with css style</h1>
+<p style="background-color:powderblue; color:red; font-family:courier; text-align:center; font-size:30px;">
+This is a paragraph with css style.</p>
+<hr>
+
+<h1>6.HTML Formattings</h1>
+<p>This text is <b>bold</b></p>
+<p>This text is <strong>important!</strong></p>
+<p>This text is <i>italic</i></p>
+<p>This text is <em>emphasized</em></p>
+<p>This is some <small>smaller</small> text</p>
+<p>This text is <mark>marked</mark></p>
+<p>This text is <del>deleted</del></p>
+<p>This text is <ins>inserted</ins></p>
+<p>This is <sub>subscripted</sub> text.</p>
+<p>This is <sup>superscripted</sup> text.</p>
+<hr>
+
+<h1>7.HTML Quotations</h1>
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html" title="blockquote example">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+<p>WWF's goal is to: <q title="short quote example">Build a future where people live in harmony with nature.</q></p>
+<p title="abbreviation example">The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<address title="address example">
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+<p><cite title="cite example">The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+<bdo dir="rtl" title="bi-directional override right to left example">This text will be written from right to left</bdo>
+<bdo dir="ltr" title="bi-directional override left to right example">. This text will be written from right to left</bdo>
+<hr>
+
+<h1>8.HTML Comments</h1>
+<!-- Single line comment -->
+<!-- 
+Multiple 
+line 
+comments 
+-->
+<hr>
+
+<h1>9.HTML Colors</h1>
+<h4 style="background-color:DodgerBlue;">Background color example</h4>
+<h5 style="background-color:rgb(255, 99, 71);">RGB(red, green, blue) Background color example</h5>
+<h5 style="background-color:#ff6347;">HEX(hexadecimal) Background color example</h5>
+<h5 style="background-color:hsl(9, 100%, 64%);">HSL(hue, saturation, lightness) Background color example</h5>
+<h5 style="background-color:rgba(255, 99, 71, 0.5);">RGBA(red, green, blue, alpha) Background color example</h5>
+<h5 style="background-color:hsla(9, 100%, 64%, 0.5);">HSLA(hue, saturation, lightness, alpha) Background color example</h5>
+<h4 style="color:Tomato;">Text color example</h4>
+<h4 style="border:2px solid Violet;">Border color example</h4>
+<hr>
+
+<h1>10.HTML CSS</h1>
+<h5 style="color:blue;">Inline CSS Example</h5>
+<h5 class="internalCss">Internal CSS Example</h5>
+<h5 class="externalCss">External CSS Example</h5>
+<hr>
+
+<h1 id="htmlLinks">11.HTML Links</h1>
+<a href="https://www.w3schools.com/">Visit W3Schools.com! (No target specified)</a><br>
+<a href="https://www.w3schools.com/" target="_blank">Taget blank</a><br>
+<a href="https://www.w3schools.com/" target="_self">Taget self</a><br>
+<a href="https://www.w3schools.com/" target="_parent">Taget parent</a><br>
+<a href="https://www.w3schools.com/" target="_top">Taget top</a><br>
+<a href="mailto:someone@example.com">Send email</a><br>
+<button onclick="document.location='html_tutorial.html'">HTML Tutorial</button><br>
+<a class="linkStyle" href="https://www.w3schools.com/" target="_blank">HTML Links Styling</a><br>
+<a href="#htmlHeadings">Jump to HTML Headings</a>
+<hr>
+
+<h1 id="htmlLinks">12.HTML Images</h1>
+<img src="w3schools.jpg" alt="W3Schools.com" style="width:128px;height:128px;"><br>
+<img src="w3schoolss.jpg" alt="W3Schools.com"><br>
+<a href="https://www.w3schools.com/" target="_blank" title="open w3schools website">
+  <img src="w3schools.jpg" alt="W3Schools.com" style="width:128px;height:128px;">
+</a><br>
+<p><img src="w3schools.jpg" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+<p><img src="w3schools.jpg" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p><br>
+
+<h3 id="htmlLinks">Image Map</h3>
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/w3images/mac.jpg" target="_blank">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/w3images/cellphone.jpg" target="_blank">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="https://www.w3schools.com/w3images/coffeehouse2.jpg" target="_blank">
+</map><br>
+<img src="https://www.w3schools.com/html/frenchfood.jpg" alt="French Food" usemap="#foodmap" width="450" height="675">
+<map name="foodmap">
+  <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" alt="Croissant"
+ href="https://www.w3schools.com/w3images/croissant.jpg" target="_blank">
+</map>
+
+<h3 id="htmlLinks">Background Image</h3>
+<pre class="bgImage">
+
+
+
+
+
+
+
+
+
+
+This is for setting background image.
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<p style="background-image: url('w3schools.jpg'); background-repeat: no-repeat; color:tomato">Added<br>Background<br>Image<br>Inline</p>
+
+
+<h3>The picture Element</h3>
+<picture>
+  <source media="(min-width: 1000px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+  <source media="(min-width: 700px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+  <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:auto;">
+</picture>
+<hr>
+
+<h1>13.HTML Favicon</h1>
+<hr>
+
+<h1>14.HTML Page Title</h1>
+<hr>
+
+<h1>15.HTML Tables</h1>
+<table style="border:1px solid black;  border-spacing: 5px; width:50%">
+  <caption>Caption example</caption>
+  <tr>
+    <th style="border:1px solid black;	padding-top: 10px;  padding-bottom: 20px;
+  	padding-left: 20px;  padding-right: 40px;" colspan="2">2 Persons</th><!-- occupies 2 columns -->
+    <th style="border:1px solid black;">Person 3</th>
+  </tr>
+  <tr style="text-align:center;">
+    <th style="border:1px solid black;" rowspan="2">Amit</th>
+    <td style="border:1px solid black;">Raja</td>
+    <td style="border:1px solid black;">ARV</td>
+  </tr>
+  <tr style="text-align:center;">
+    <td style="border:1px solid black;">20</td>
+    <td style="border:1px solid black;">30</td>
+  </tr>
+</table>
+
+<h3>Table colgroup</h3>
+<table style="border:1px solid black; width: 100%;">
+<colgroup>
+  <col span="3" style="background-color: #D6EEEE">
+  <col span="2" style="background-color: pink">
+  <col span="1" style="visibility: collapse">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+<hr>
+
+<h1>16.HTML Lists</h1>
+<ul title="unordered list">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<ol title="ordered list">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<dl title="description list">
+  <dt title="defines the term in description list">Coffee</dt>
+  <dd title="describes the term in description list">- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+<h3>Unordered list</h3>
+<ul>
+  <li style="list-style-type:square;" title="square styled">Coffee</li>
+  <li style="list-style-type:disc;" title="disc styled">Tea</li>
+  <li style="list-style-type:circle;" title="circle styled">Milk</li>
+  <li style="list-style-type:none;" title="none styled">Water</li>
+</ul>
+
+<h3>Ordered list</h3>
+<ol type="1" title="numeric styled">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol>
+<ol type="A" title="capital alphabetic styled">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol>
+<ol type="a" title="small alphabetic styled">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol>
+<ol type="I" title="capital roman numeric styled">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol>
+<ol type="i" title="small roman numeric styled">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ol>
+<hr>
+
+<h1>17.HTML Block & Inline</h1>
+<div title="block element">
+Div element<p title="block element">Paragraph element</p><span title="inline element">Span element</span>
+</div>
+<hr>
+
+<h1>18.HTML Div, Id & Classes</h1>
+<h3>Div</h3>
+<div style="background-color:#FFF4A3;">
+  <h4>London</h4>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+<div style="background-color:#FFC0C7;">
+  <h4>Oslo</h4>
+  <p>Oslo is the capital city of Norway.</p>
+  <p>Oslo has over 600.000 inhabitants.</p>
+</div>
+<div style="background-color:#D9EEE1;">
+  <h4>Rome</h4>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+
+<div class="mycontainer" style="overflow:auto; width:100%" title="float example">
+  <div style="background-color:#FFF4A3; float:left; width:33%">
+    <h4>London</h4>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#FFC0C7; float:left; width:33%">
+    <h4>Oslo</h4>
+    <p>Oslo is the capital city of Norway.</p>
+    <p>Oslo has over 600.000 inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#D9EEE1; float:left; width:33%">
+    <h4>Rome</h4>
+    <p>Rome is the capital city of Italy.</p>
+    <p>Rome has almost 3 million inhabitants.</p>
+  </div>
+</div><br>
+
+<div class="mycontainer" style="overflow:auto; width:50%" title="in-line block example">
+  <div style="background-color:#FFF4A3; display:inline-block; width:15%">
+    <h4>London</h4>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#FFC0C7; display:inline-block; width:20%">
+    <h4>Oslo</h4>
+    <p>Oslo is the capital city of Norway.</p>
+    <p>Oslo has over 600.000 inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#D9EEE1; display:inline-block; width:15%">
+    <h4>Rome</h4>
+    <p>Rome is the capital city of Italy.</p>
+    <p>Rome has almost 3 million inhabitants.</p>
+  </div>
+</div><br>
+
+<div class="mycontainer" style="display:flex;" title="flex example">
+  <div style="background-color:#FFF4A3; width:33%">
+    <h4>London</h4>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#FFC0C7; width:33%">
+    <h4>Oslo</h4>
+    <p>Oslo is the capital city of Norway.</p>
+    <p>Oslo has over 600.000 inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#D9EEE1; width:33%">
+    <h4>Rome</h4>
+    <p>Rome is the capital city of Italy.</p>
+    <p>Rome has almost 3 million inhabitants.</p>
+  </div>
+</div><br>
+
+<div class="mycontainer" style="display:grid; grid-template-columns: 33% 33% 33%;" title="grid example">
+  <div style="background-color:#FFF4A3;">
+    <h4>London</h4>
+    <p>London is the capital city of England.</p>
+    <p>London has over 13 million inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#FFC0C7;">
+    <h4>Oslo</h4>
+    <p>Oslo is the capital city of Norway.</p>
+    <p>Oslo has over 600.000 inhabitants.</p>
+  </div>
+  
+  <div style="background-color:#D9EEE1;">
+    <h4>Rome</h4>
+    <p>Rome is the capital city of Italy.</p>
+    <p>Rome has almost 3 million inhabitants.</p>
+  </div>
+</div><br>
+
+<h3 class="classExample" title="class example">Class</h3>
+
+<h3 class="idExample" title="id example">Id</h3>
+<hr>
+
+<h1>19.JavaScript</h1>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+<hr>
+
+<h1>20.HTML Computercode</h1>
+<pre>
+<code title="computer code example">
+x = 5;
+y = 6;
+z = x + y;
+</code></pre>
+<p>Save the document by pressing <kbd title="keyboard input example">Ctrl + S</kbd></p>
+<p><samp title="samp computer output example">File not found.<br>Press F1 to continue</samp></p>
+<p>The area of a triangle is: 1/2 x <var title="variable example">b</var> x <var title="variable example">h</var>, 
+where <var title="variable example">b</var> is the base, and <var title="variable example">h</var> is the vertical height.</p>
+<hr>
+
+<h1>21.HTML Semantics</h1>
+
+<h3>Section</h3>
+<section>
+<h4>WWF</h4>
+<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+</section>
+<section>
+<h4>WWF's Panda symbol</h4>
+<p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+</section>
+
+<h3>Article</h3>
+<article>
+<h4>Google Chrome</h4>
+<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+</article>
+<article>
+<h4>Mozilla Firefox</h4>
+<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+</article>
+
+<h3>Footer</h3>
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+<h3>Navigation</h3>
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+
+<h3>Aside</h3>
+<aside title="aside">
+<h4>Epcot Center</h4>
+<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<figure title="figure">
+  <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli">
+  <figcaption title="figure caption">Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+<hr>
+
+<h1>22.HTML Entities, Symbols & Emojis</h1>
+
+<h3>Entities</h3>
+<h5>Non-breaking space: &nbsp;</h5>
+<h5>The less-than sign: &lt;</h5>
+<h5>The greater-than sign: &gt;</h5>
+<h5>The ampersand sign: &amp;</h5>
+<h5>The quotation sign: &quot;</h5>
+
+<h3>Symbols</h3>
+<h5>The for-all symbol: &forall;</h5>
+<h5>The partial differential symbol: &part;</h5>
+<h5>The there-exists symbol: &exist;</h5>
+<h5>The empty-sets symbol: &empty;</h5>
+<h5>The nabla symbol: &nabla;</h5>
+
+<h3>Emojis</h3>
+<h5>Rocket emoji: &#128640;</h5>
+<h5>Chopper emoji: &#128641;</h5>
+<h5>Train emoji: &#128642;</h5>
+<h5>Fire engine emoji: &#128658;</h5>
+<h5>Ship emoji: &#128674;</h5>
+<hr>
+
+<h1>23.Iframe</h1>
+<iframe src="html_tutorial.html" height="400" width="800" style="border:none;" title="Iframe Example"/>
+
+</body>
+</html>

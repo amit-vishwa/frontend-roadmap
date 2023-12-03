@@ -1,0 +1,8 @@
+.externalCss{
+  color: tomato;
+  font-family: verdana;
+  font-size: 100%;
+  border: 2px solid powderblue;
+  padding: 5px; // space between text & border
+  margin: 5px; // space outside border
+}
