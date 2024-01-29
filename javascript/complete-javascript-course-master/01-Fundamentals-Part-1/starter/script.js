@@ -214,3 +214,182 @@ if(BMIMark > BMIJohn){
   console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 }
 */
+
+/* Type conversion and coercion
+console.log("Type conversion:");
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+console.log(Number("Amit"));
+console.log(typeof NaN);
+console.log(String(13), 13);
+console.log("\nType coercion:");
+console.log("I am " + 27 + " years old"); // type coercion (automatically done here)
+console.log("I am " + String(27) + " years old"); // type conversion (done manually here)
+console.log("23" - 4 - "20" + 10, "23" + 4 + "20" + 10);
+console.log("23" * "10", "23" / "10");
+let n = "1" + 1;
+n = n - 2;
+console.log(n);
+console.log("23" - 4 - "20" + 123 + "10");
+*/
+
+/* Truthy & Falsy Values
+// 5 falsy values when converted to boolean => 0, '', null, undefined, NaN
+console.log(Boolean(0), Boolean(1)); // manually converted or type conversion
+console.log(Boolean(null), Boolean({}));
+console.log(Boolean(undefined), Boolean([]));
+console.log(Boolean(NaN), Boolean(134));
+console.log(Boolean(""), Boolean("Amit"));
+const money = 9;
+if (money) console.log("Do saving!");
+else console.log("Get a job!");
+let height;
+if (height) console.log("Height is defined!");
+else console.log("Height is undefined!");
+*/
+
+/* Equality operators
+// Loose equality operator => ==
+// Strict equality operator => ===
+// Always use strict equality operator for good practice
+console.log(
+  "Loose equality operator ('18' == 18) : " + ("18" == 18),
+  "\nStrict equality operator ('18' === 18) : " + ("18" === 18)
+);
+const age = Number(prompt("Enter your age!"));
+console.log(age, typeof age);
+if (age == 18) console.log("You just became an adult!");
+if (age === 18) console.log("You just became an adult!");
+if (age != 18) console.log("You just not became an adult!");
+if (age !== 18) console.log("You just not became an adult!");
+*/
+
+/* Boolean Logic & Logical Operators
+const hasDriversLicense = true;
+const hasGoodVision = false;
+console.log(
+  "Has drivers license & good vision : ",
+  hasDriversLicense && hasGoodVision
+);
+console.log(
+  "Has drivers license or good vision : ",
+  hasDriversLicense || hasGoodVision
+);
+console.log("Not has drivers license : ", !hasDriversLicense);
+console.log("Not has good vision : ", !hasGoodVision);
+console.log(
+  "Not has drivers license & good vision : ",
+  !(hasDriversLicense && hasGoodVision)
+);
+console.log(
+  "Not has drivers license or good vision : ",
+  !(hasDriversLicense || hasGoodVision)
+);
+*/
+
+/*
+CHALLENGE #3
+There are two gymnastics teams: Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data included below. The average score for Dolphins should be assigned to the scoreDolphins variable, and the average score of Koalas should be assigned to the scoreKoalas variable.
+2. Compare the team's average scores to determine the winner of the competition, and print to the console:
+"Dolphins win the trophy" if Dolphins win, or
+"Koalas win the trophy" if Koalas win, or
+"Both win the trophy" if their average scores are equal.
+TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
+
+// Solution:
+const scoreDolphins = (96+108+89)/3;
+const scoreKoalas = (88+91+110)/3;
+if(scoreDolphins>scoreKoalas)
+console.log("Dolphins win the trophy");
+else if(scoreKoalas>scoreDolphins)
+console.log("Koalas win the trophy");
+else
+console.log("Both win the trophy");
+*/
+
+/* The switch statement
+const day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "Tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "Wednesday":
+  case "Thursday":
+    console.log("Write code examples");
+    break;
+  case "Friday":
+    console.log("Record videos");
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day");
+}
+if (day === "Monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "Tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "Wednesday" || day === "Thursday") {
+  console.log("Write code examples");
+} else if (day === "Friday") {
+  console.log("Record videos");
+} else if (day === "Saturday" || day === "Sunday") {
+  console.log("Enjoy the weekend");
+} else {
+  console.log("Not a valid day");
+}
+*/
+
+/* Statements & Expressions
+i.Statements are some block of codes which don't produce any value, 
+they just perform some actions.
+Eg: if(10>20){ console.log("10 is greater than 20");}
+
+ii.Expressions are something that produces values and template literals
+can have expressions only and not any statements.
+Eg: true, 10, "Name is Ching!", etc.
+*/
+
+/* The conditional (ternary) operator:
+const age = 19;
+// age >= 18
+//   ? console.log("You can drink wine!")
+//   : console.log("You cannot drink wine!");
+const drink = age >= 18 ? "Wine" : "Water";
+console.log("You can drink " + drink);
+let drink2;
+if (age >= 18) drink2 = "Wine";
+else drink2 = "Water";
+console.log("You can drink " + drink2);
+// ternary operator can be used with template literal and thus statement can be 
+// converted to expression as this will produce some value 
+console.log(`I would like to drink ${age >= 18 ? "Wine" : "Water"}`);
+*/
+
+/*
+CHALLENGE #4
+Steven needs a very simple tip calculator for whenever he goes to eat in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+Your tasks:
+i.Calculate the tip, depending on the bill value. Create a variable called tip for this. It's not allowed to use an if...else statement (if it's easier for you, you can start with an if...else statement, and then try to convert it to a ternary operator).
+ii.Print a string to the console containing the bill value, the tip, and the final value (bill + tip).
+Example: The bill was 275, the tip was 41.25, and the total value 316.25.
+Note: Use the values of the bill and tip variables to construct this string. Don't hard-code them 🙂
+TEST DATA: Test with different bill values: 275, 40, and 430
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT 2: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+// Solution:
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+*/
