@@ -216,3 +216,261 @@ console.log(tips);
 const totals = new Array(bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]);
 console.log(totals);
 */
+
+/* Introduction to objects
+const amitArray = [
+  "Amit",
+  "Vishwakarma",
+  2024 - 1997,
+  "Software developer",
+  ["Raj", "Raja", "Rajan"],
+];
+
+const amitObject = {
+  firstName: "Amit",
+  lastName: "Vishwakarma",
+  age: 2024 - 1997,
+  profession: "Software developer",
+  friends: ["Raj", "Raja", "Rajan"],
+};
+
+console.log(amitArray, amitObject);
+*/
+
+/* Dot vs. Bracket Notation
+const amitObject = {
+  firstName: "Amit",
+  lastName: "Vishwakarma",
+  age: 2024 - 1997,
+  profession: "Software developer",
+  friends: ["Raj", "Raja", "Rajan"],
+};
+const age = "age";
+console.log(amitObject.firstName, amitObject["lastName"], amitObject[age]);
+const nameKey = "Name";
+const firstNameKey = "firstName";
+console.log(
+  amitObject.firstNameKey,
+  amitObject["first" + nameKey],
+  amitObject["last" + nameKey]
+);
+
+const property = prompt("What you want to know about Amit?");
+console.log(
+  property,
+  amitObject[property] ? amitObject[property] : "Select another property!"
+);
+amitObject.location = "Mumbai";
+amitObject["native"] = "Prayagraj";
+console.log(amitObject);
+
+// Challenge -> log a sentence without hardcoding 'Amit has 3 friends and his bestfriend is Raja'
+console.log(
+  `${amitObject.firstName} has ${
+    amitObject.friends.length
+  } friends and his bestfriend is ${
+    amitObject.friends[amitObject.friends.indexOf("Raja")]
+  }`
+);
+*/
+
+/* Object Methods
+const amit = {
+  firstName: "Amit",
+  lastName: "Vishwakarma",
+  birthYear: 1997,
+  profession: "Software developer",
+  friends: ["Raj", "Raja", "Rajan"],
+  hasDriverLicense: true,
+  calculateAge: function () {
+    // console.log(this);
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+  isEligibleToDrive: (isAdult) => isAdult,
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calculateAge()}-year old ${
+      this["profession"]
+    }, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`;
+  },
+};
+// console.log(
+//   // amit,
+//   amit.calculateAge(),
+//   amit["isEligibleToDrive"](amit.age > 18)
+// );
+const hasA = (hasDriverLicense) => (hasDriverLicense ? "a" : "no");
+// Challenge: Create string 'Amit is a 27-year old Software developer, and he has a/no driver's license'
+// console.log(
+//   `${amit.firstName} is a ${amit.age}-year old ${
+//     amit["profession"]
+//   }, and he has ${hasA(amit.hasDriverLicense)} driver's license`
+// );
+console.log(amit.getSummary());
+*/
+
+/*
+CHALLENGE #3
+Let's go back to Mark and John comparing their BMIs!
+This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+Your tasks:
+i.For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+ii.Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property, and also return it from the method.
+iii.Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// Solution:
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function(){
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+  }
+}
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function(){
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+  }
+}
+mark.calcBMI();
+john.calcBMI();
+if(mark.bmi>john.bmi)
+console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+else
+console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
+*/
+
+/* Iteration: The For Loop
+// console.log(`Lifting weights repetition 1!`);
+// console.log(`Lifting weights repetition 2!`);
+// console.log(`Lifting weights repetition 3!`);
+// console.log(`Lifting weights repetition 4!`);
+// console.log(`Lifting weights repetition 5!`);
+for (let rep = 1; rep <= 5; rep++)
+  console.log(`Lifting weights repetition ${rep}!`);
+*/
+
+/* Looping Arrays, Breaking & Continuing
+const amitArray = [
+  "Amit",
+  "Vishwakarma",
+  2024 - 1997,
+  "Software developer",
+  ["Raj", "Raja", "Rajan"],
+  true,
+];
+// const typeOfAmitArrayItems = new Array();
+// for (let i = 0; i < amitArray.length; i++) {
+//   // typeOfAmitArrayItems[i] = typeof amitArray[i];
+//   typeOfAmitArrayItems.push(typeof amitArray[i]);
+//   // typeOfAmitArrayItems.unshift(typeof amitArray[i]);
+//   console.log(typeof amitArray[i], amitArray[i]);
+// }
+// console.log(typeOfAmitArrayItems);
+
+for (let i = 0; i < amitArray.length; i++) {
+  // logging only strings
+  // if (typeof amitArray[i] !== "string") continue;
+  // if (typeof amitArray[i] !== typeof amitArray[0]) continue;
+
+  // breaking if found number type
+  if (typeof amitArray[i] === "boolean") break;
+  console.log(typeof amitArray[i], amitArray[i]);
+}
+*/
+
+/* Looping Backwards and Loops in Loops
+const amitArray = [
+  "Amit",
+  "Vishwakarma",
+  2024 - 1997,
+  "Software developer",
+  ["Raj", "Raja", "Rajan"],
+  true,
+];
+// looping backwards
+for (let index = amitArray.length - 1; index >= 0; index--) {
+  console.log(index, amitArray[index]);
+}
+// nested for loop
+for (let i = 1; i <= 5; i++) {
+  console.log("Exercise " + i);
+  for (let j = 1; j < 6; j++) {
+    console.log("Exercise " + i + ": Doing repetition " + j);
+  }
+}
+*/
+
+/* The While Loop
+// for (let rep = 1; rep <= 5; rep++)
+//   console.log(`Lifting weights repetition ${rep}!`);
+let rep = 1;
+// while (rep <= 10) {
+//   console.log(`Lifting weights repetition ${rep}!`);
+//   rep++;
+// }
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+// if we don't know the length of array or list the while loop is best to use
+while (dice !== 6) {
+  console.log(`You rolled ${dice}`);
+  // if below line removed then loop enters in infinite mode if dice is not 6
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Got 6, ending the loop now!");
+}
+*/
+
+/*
+CHALLENGE #4
+Let's improve Steven's tip calculator even more, this time using loops!
+
+Your tasks:
+i.Create an array called bills containing all 10 test bill values.
+ii.Create empty arrays for the tips and the totals (tips and totals)
+iii.Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+
+BONUS:
+i.Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it if you feel like it:
+ii.First, you will need to add up all values in the array. To do the addition, start by creating a variable sum that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together.
+iii.To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
+iv.Call the function with the totals array.
+
+// Solution:
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = new Array();
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i]+tips[i]);
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+const calcAverage = function(arr){
+    let sum = 0;
+    // arr.forEach((i)=>{
+    //     sum += i; 
+    // });
+    // using below simple for loop since for-each loop not taught yet
+    for(let i = 0; i < arr.length; i++)
+    sum += arr[i];
+    return sum/arr.length;
+}
+
+console.log(calcAverage(totals));
+*/
