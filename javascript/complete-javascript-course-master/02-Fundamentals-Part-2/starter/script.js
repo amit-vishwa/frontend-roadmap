@@ -117,3 +117,102 @@ const scoreDolphins1 = calcAverage(44, 23, 71);
 const scoreKoalas1 = calcAverage(65, 54, 49);
 checkWinner(scoreDolphins1, scoreKoalas1);
 */
+
+/* Introduction to Arrays
+const friend1 = "Amit";
+const friend2 = "Raja";
+const friend3 = "Raj";
+
+const friends = ["Amit", "Raja", "Raj"];
+console.log(friends.length, friends[2], friends);
+
+const years = new Array(1997, 1998, 1999, 2000);
+console.log(years.length, years[3], years);
+
+friends[2] = "Rajan";
+years[3] = 2024;
+console.log(friends, years);
+
+// friends = ["abc", "xyz"];
+// console.log(friends);
+
+const firstName = "Amit";
+const amit = [
+  firstName,
+  "Vishwakarma",
+  2024 - 1997,
+  "Software developer",
+  friends,
+];
+console.log(amit);
+
+const calcAge = (birthYear) => 2024 - birthYear;
+const ages = [];
+let i = 0;
+years.forEach((year) => {
+  ages[i] = calcAge(year);
+  i++;
+});
+console.log(ages);
+*/
+
+/* Basic Array Operations (Methods)
+const years = new Array(1997, 1998, 1999, 2000);
+console.log(years);
+
+let newLength = years.push(2001); // push returns new array length
+console.log(
+  "pushing new data " + years[newLength - 1],
+  "|| new array length after push is " + newLength,
+  years
+);
+
+newLength = years.unshift(1996); // unshift returns new array length and inserts data at first index
+console.log(
+  "unshifting new data " + years[0],
+  "|| new array length after unshift is " + newLength,
+  years
+);
+
+let poppedItem = years.pop(); // pop returns popped array data
+console.log(
+  "popped data " + poppedItem,
+  "|| new array length after pop is " + years.length,
+  years
+);
+
+let shiftedItem = years.shift();
+console.log(
+  "shifted data " + shiftedItem,
+  "|| new array length after shift is " + years.length,
+  years
+);
+
+console.log("Index of 2000 is " + years.indexOf(2000));
+console.log("Index of 1990 is " + years.indexOf(1990)); // returns -1 if index not found
+
+console.log(years.includes(2000), years.includes(2001)); // includes is ES6 method returns boolean
+console.log(years.includes("2000")); // includes do strict equality checking
+*/
+
+/*
+CHALLENGE #2
+Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+Your tasks:
+i.Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+ii.And now let's use arrays! So, create an array called bills containing the test data below.
+iii.Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+BONUS: Create an array totals containing the total values, so the bill + tip.
+TEST DATA: 125, 555, and 44.
+
+// Solution:
+const calcTip = (bill) => (bill>=50 && bill<=300)? bill*0.15: bill*0.2;
+console.log(calcTip(100));
+const bills = new Array(125, 555, 44);
+const tips = new Array(calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2]));
+console.log(tips);
+const totals = new Array(bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]);
+console.log(totals);
+*/
