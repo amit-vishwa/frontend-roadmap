@@ -69,7 +69,7 @@ holdButton.addEventListener('click', () => {
       scores[activePlayer];
 
     // 2.If player score >= 100, end game
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       playing = false;
       document
         .querySelector(`.player--${activePlayer}`)
