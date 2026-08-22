@@ -23,8 +23,9 @@ The repository includes HTML, CSS, JavaScript, Bootstrap, and course-based appli
 
 A 2026 security review found numerous high-severity npm advisories in old Parcel-based course lockfiles, including issues in `js-yaml`, `brace-expansion`, `svgo`, `immutable`, `postcss`, `sharp`, `lodash`, and `node-forge`.
 
-The affected package manifests and generated lockfiles have been removed from the four copied course snapshots under:
+The affected package manifests and generated lockfiles have been removed from the copied course snapshots under:
 
+- `javascript/`
 - `javascript/complete-javascript-course-master/17-Modern-JS-Modules-Tooling/{starter,final}`
 - `javascript/complete-javascript-course-master/18-forkify/{starter,final}`
 
