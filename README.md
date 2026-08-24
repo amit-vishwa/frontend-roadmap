@@ -25,11 +25,12 @@ A 2026 security review found numerous high-severity npm advisories in old Parcel
 
 The affected package manifests and generated lockfiles have been removed from the copied course snapshots under:
 
+- the repository root;
 - `javascript/`
 - `javascript/complete-javascript-course-master/17-Modern-JS-Modules-Tooling/{starter,final}`
 - `javascript/complete-javascript-course-master/18-forkify/{starter,final}`
 
-Those folders are now source-only references. Do not restore their historical dependency files or run package installation against them. If an exercise is worth revisiting, create a new project with a supported runtime and current dependencies, then migrate only the application source that is still useful.
+Generated Parcel cache data was also removed and is now ignored. These folders are source-only references. Do not restore their historical dependency files or run package installation against them. If an exercise is worth revisiting, create a new project with a supported runtime and current dependencies, then migrate only the application source that is still useful.
 
 ## Recommended use
 
